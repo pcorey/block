@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 		<style>
 			.scene {
 				position: absolute;
@@ -26,7 +27,8 @@
 			}
 
 			.view {
-				transform: rotateY(3.0rad);
+				transform: rotateY(0rad);
+				transition: transform 2s ease-in-out;
 			}
 
 			.face {
@@ -65,5 +67,20 @@
 				<div class="object-3d face"><img width="100%" height="100%" src="http://s3.amazonaws.com/okfocus/redbull/street_exposure_layers_0002.jpg"></div>
 			</div>
 		</div>
+		<script>
+			$(function() {
+				var time = 2000,
+					rotX = 0;
+					rotY = 0;
+
+				function lookAround() {
+					rotY += Math.random()*3.14 - (3.14/2);
+					rotX += Math.random()*0.5 - 0.25;
+					$('.view').css('transform', 'rotateX('+rotX+'rad) rotateY('+rotY+'rad)');
+					setTimeout(lookAround, time);
+				}
+				setTimeout(lookAround, time);
+			});
+		</script>
 	</body>
 </html>
