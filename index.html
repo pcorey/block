@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			.scene {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+				pointer-events: none;
+
+				perspective-origin: 50% 50%;
+				perspective: 450px;
+
+				cursor: grab;
+			}
+
+			.object-3d {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+
+				transform-style: preserve-3d;
+			}
+
+			.view {
+				transform: rotateY(3.0rad);
+			}
+
+			.face {
+				width: 1497px;
+				height: 1497px;
+				background-repeat: no-repeat;
+			}
+			.face:nth-child(1) {
+				transform: translate3d(-50%, -50%, 0px) translate3d(0px, -745.5px, 0px) scale3d(1, 1, 1) rotateX(1.5708rad) rotateY(0rad) rotateZ(0rad);
+			}
+			.face:nth-child(2) {
+				transform: translate3d(-50%, -50%, 0px) translate3d(0px, 745.5px, 0px) scale3d(1, 1, 1) rotateX(-1.5708rad) rotateY(0rad) rotateZ(0rad);
+			}
+			.face:nth-child(3) {
+				transform: translate3d(-50%, -50%, 0px) translate3d(-745.5px, 0px, 0px) scale3d(1, 1, 1) rotateX(0rad) rotateY(-1.5708rad) rotateZ(0rad);
+			}
+			.face:nth-child(4) {
+				transform: translate3d(-50%, -50%, 0px) translate3d(745.5px, 0px, 0px) scale3d(1, 1, 1) rotateX(0rad) rotateY(1.5708rad) rotateZ(0rad);
+			}
+			.face:nth-child(5) {
+				transform: translate3d(-50%, -50%, 0px) translate3d(0px, 0px, 745.5px) scale3d(1, 1, 1) rotateX(0rad) rotateY(0rad) rotateZ(0rad);
+			}
+			.face:nth-child(6) {
+				transform: translate3d(-50%, -50%, 0px) translate3d(0px, 0px, -745.5px) scale3d(1, 1, 1) rotateX(0rad) rotateY(3.14159rad) rotateZ(0rad);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="scene">
+			<div class="object-3d view">
+				<div class="object-3d face"><img width="100%" height="100%" src="http://s3.amazonaws.com/okfocus/redbull/street_exposure_layers_0004.jpg"></div>
+				<div class="object-3d face"><img width="100%" height="100%" src="http://s3.amazonaws.com/okfocus/redbull/street_exposure_layers_0005.jpg"></div>
+				<div class="object-3d face"><img width="100%" height="100%" src="http://s3.amazonaws.com/okfocus/redbull/street_exposure_layers_0003.jpg"></div>
+				<div class="object-3d face"><img width="100%" height="100%" src="http://s3.amazonaws.com/okfocus/redbull/street_exposure_layers_0001.jpg"></div>
+				<div class="object-3d face"><img width="100%" height="100%" src="http://s3.amazonaws.com/okfocus/redbull/street_exposure_layers_0000.jpg"></div>
+				<div class="object-3d face"><img width="100%" height="100%" src="http://s3.amazonaws.com/okfocus/redbull/street_exposure_layers_0002.jpg"></div>
+			</div>
+		</div>
+	</body>
+</html>
