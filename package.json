@@ -1,0 +1,10 @@
+{
+  "name": "block",
+  "description": "block",
+  "author": "petecorey@gmail.com",
+  "dependencies": {},
+  "engine": "node >= 0.4.1",
+  "devDependencies": {
+    "grunt": "~0.4.5"
+  }
+}
