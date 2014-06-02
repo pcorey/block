@@ -37,49 +37,80 @@
 				background-repeat: no-repeat;
 			}
 			.face:nth-child(1) {
-				transform: translate3d(-50%, -50%, 0px) translate3d(0px, -745.5px, 0px) scale3d(1, 1, 1) rotateX(1.5708rad) rotateY(0rad) rotateZ(0rad);
+				transform: translate3d(-50%, -50%, 0px) translate3d(0px, -745.5px, 0px) rotateX(1.5708rad) rotateY(0rad) rotateZ(0rad);
 			}
 			.face:nth-child(2) {
-				transform: translate3d(-50%, -50%, 0px) translate3d(0px, 745.5px, 0px) scale3d(1, 1, 1) rotateX(-1.5708rad) rotateY(0rad) rotateZ(0rad);
+				transform: translate3d(-50%, -50%, 0px) translate3d(0px, 745.5px, 0px) rotateX(-1.5708rad) rotateY(0rad) rotateZ(0rad);
 			}
 			.face:nth-child(3) {
-				transform: translate3d(-50%, -50%, 0px) translate3d(-745.5px, 0px, 0px) scale3d(1, 1, 1) rotateX(0rad) rotateY(-1.5708rad) rotateZ(0rad);
+				transform: translate3d(-50%, -50%, 0px) translate3d(-745.5px, 0px, 0px) rotateX(0rad) rotateY(-1.5708rad) rotateZ(0rad);
 			}
 			.face:nth-child(4) {
-				transform: translate3d(-50%, -50%, 0px) translate3d(745.5px, 0px, 0px) scale3d(1, 1, 1) rotateX(0rad) rotateY(1.5708rad) rotateZ(0rad);
+				transform: translate3d(-50%, -50%, 0px) translate3d(745.5px, 0px, 0px) rotateX(0rad) rotateY(1.5708rad) rotateZ(0rad);
 			}
 			.face:nth-child(5) {
-				transform: translate3d(-50%, -50%, 0px) translate3d(0px, 0px, 745.5px) scale3d(1, 1, 1) rotateX(0rad) rotateY(0rad) rotateZ(0rad);
+				transform: translate3d(-50%, -50%, 0px) translate3d(0px, 0px, 745.5px) rotateX(0rad) rotateY(0rad) rotateZ(0rad);
 			}
 			.face:nth-child(6) {
-				transform: translate3d(-50%, -50%, 0px) translate3d(0px, 0px, -745.5px) scale3d(1, 1, 1) rotateX(0rad) rotateY(3.14159rad) rotateZ(0rad);
+				transform: translate3d(-50%, -50%, 0px) translate3d(0px, 0px, -745.5px) rotateX(0rad) rotateY(3.14159rad) rotateZ(0rad);
+			}
+
+			.content .face h1 {
+				text-align: center;
+				line-height: 1497px;
+			}
+
+			@-moz-keyframes lookaround {
+				0%   { transform: rotateX(0rad)     rotateY(0rad);     }
+				12%   { transform: rotateX(0.05rad)     rotateY(-0.05rad);     }
+				25%  { transform: rotateX(0.01rad)   rotateY(0.01rad);  }
+				37%   { transform: rotateX(-0.01rad)     rotateY(0rad);     }
+				50%  { transform: rotateX(-0.04rad) rotateY(0.01rad);  }
+				62%   { transform: rotateX(0rad)     rotateY(-0.03rad);     }
+				75%  { transform: rotateX(0.01rad)  rotateY(-0.08rad); }
+				87%   { transform: rotateX(-0.02rad)     rotateY(0.01rad);     }
+				100% { transform: rotateX(0rad)     rotateY(0rad);     }
+			}
+
+			.lookaround {
+				-moz-animation: lookaround 30s ease-in-out infinite;
 			}
 		</style>
 	</head>
 	<body>
 		<div class="scene">
 			<div class="object-3d view">
-				<div class="object-3d face"><img width="100%" height="100%" src="http://s3.amazonaws.com/okfocus/redbull/street_exposure_layers_0004.jpg"></div>
-				<div class="object-3d face"><img width="100%" height="100%" src="http://s3.amazonaws.com/okfocus/redbull/street_exposure_layers_0005.jpg"></div>
-				<div class="object-3d face"><img width="100%" height="100%" src="http://s3.amazonaws.com/okfocus/redbull/street_exposure_layers_0003.jpg"></div>
-				<div class="object-3d face"><img width="100%" height="100%" src="http://s3.amazonaws.com/okfocus/redbull/street_exposure_layers_0001.jpg"></div>
-				<div class="object-3d face"><img width="100%" height="100%" src="http://s3.amazonaws.com/okfocus/redbull/street_exposure_layers_0000.jpg"></div>
-				<div class="object-3d face"><img width="100%" height="100%" src="http://s3.amazonaws.com/okfocus/redbull/street_exposure_layers_0002.jpg"></div>
+				<div class="object-3d lookaround">
+					<div class="object-3d face"><img width="100%" height="100%" src="http://s3.amazonaws.com/okfocus/redbull/street_exposure_layers_0004.jpg"></div>
+					<div class="object-3d face"><img width="100%" height="100%" src="http://s3.amazonaws.com/okfocus/redbull/street_exposure_layers_0005.jpg"></div>
+					<div class="object-3d face"><img width="100%" height="100%" src="http://s3.amazonaws.com/okfocus/redbull/street_exposure_layers_0003.jpg"></div>
+					<div class="object-3d face"><img width="100%" height="100%" src="http://s3.amazonaws.com/okfocus/redbull/street_exposure_layers_0001.jpg"></div>
+					<div class="object-3d face"><img width="100%" height="100%" src="http://s3.amazonaws.com/okfocus/redbull/street_exposure_layers_0000.jpg"></div>
+					<div class="object-3d face"><img width="100%" height="100%" src="http://s3.amazonaws.com/okfocus/redbull/street_exposure_layers_0002.jpg"></div>
+				</div>
+			</div>
+			<div class="content">
+				<div class="face"><h1>Hello 01</h1></div>
+				<div class="face"><h1>Hello 02</h1></div>
+				<div class="face"><h1>Hello 03</h1></div>
+				<div class="face"><h1>Hello 04</h1></div>
+				<div class="face"><h1>Hello 05</h1></div>
+				<div class="face"><h1>Hello 06</h1></div>
 			</div>
 		</div>
 		<script>
 			$(function() {
-				var time = 2000,
-					rotX = 0;
-					rotY = 0;
+				// var time = 2000,
+				// 	rotX = 0;
+				// 	rotY = 0;
 
-				function lookAround() {
-					rotY += Math.random()*3.14 - (3.14/2);
-					rotX += Math.random()*0.5 - 0.25;
-					$('.view').css('transform', 'rotateX('+rotX+'rad) rotateY('+rotY+'rad)');
-					setTimeout(lookAround, time);
-				}
-				setTimeout(lookAround, time);
+				// function lookAround() {
+				// 	rotY += Math.random()*3.14 - (3.14/2);
+				// 	rotX += Math.random()*0.25 - 0.125;
+				// 	$('.view').css('transform', 'rotateX('+rotX+'rad) rotateY('+rotY+'rad)');
+				// 	setTimeout(lookAround, time);
+				// }
+				// setTimeout(lookAround, time);
 			});
 		</script>
 	</body>
